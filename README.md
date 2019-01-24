@@ -17,9 +17,7 @@
 
 ## Django示例代码
 
-+ 首先在BizWxUtil.py里设置参数sToken、sEncodingAESKey、sCorpID
-+ 下面是views.py中的示例代码
-
+> 首先在BizWxUtil.py里设置参数sToken、sEncodingAESKey、sCorpID
 
 
     from django.shortcuts import render

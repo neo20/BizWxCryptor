@@ -1,5 +1,5 @@
 # BizWxCryptor
-+ 企业微信自建应用加密解密类，在python3.5上测试
++ 企业微信自建应用加密解密类，在python3.5上测试通过
 + 大部分代码来自项目：https://github.com/sbzhu/weworkapi_python 
 + 修改了其不兼容python3的部分 
 
@@ -24,16 +24,16 @@
     from django.http import HttpResponse
     from django.views.decorators.csrf import csrf_exempt
     
-    from . import WorkWXUtil 
+    from . import BizWxUtil 
 
     @csrf_exempt
     def index(request):
         # 回应url验证
         if 'echostr' in request.GET:
-            return WorkWXUtil.responseEcho(request)
+            return BizWxUtil.responseEcho(request)
 
         if request.method == 'POST':
-            message = WorkWXUtil.parseMessage(request)
+            message = BizWxUtil.parseMessage(request)
             # 示例，原文返回
             text = {
                 'to_user':message['FromUserName'],
@@ -41,4 +41,4 @@
                 'type':'text',
                 'content':message['Content'],
             }
-            return WorkWXUtil.parseResponse(text)
+            return BizWxUtil.parseResponse(text)

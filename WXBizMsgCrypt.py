@@ -158,12 +158,12 @@ class ResponseMessage():
                        '<Title><![CDATA[%(title)s]]></Title>'+\
                        '<Description><![CDATA[%(description)s]]></Description>'+\
                    '</Video>'
-    ARTICLE_RESPONSE_FIELD = '<items>'+\
+    ARTICLE_RESPONSE_FIELD = '<item>'+\
                        '<Title><![CDATA[%(title)s]]></Title>'+\
                        '<Description><![CDATA[%(description)s]]></Description>'+\
                        '<PicUrl><![CDATA[%(pic_url)s]]></PicUrl>' +\
                        '<Url><![CDATA[%(url)s]]></Url>'+\
-                   '</items>'
+                   '</item>'
 
     def __init__(self,data_dict):
         
